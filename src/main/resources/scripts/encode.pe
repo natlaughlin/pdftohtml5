@@ -1,0 +1,24 @@
+#!/usr/local/bin/fontforge
+Open($1);
+Print($fontname)
+
+#make the font unicode, don't rearrange glyphs
+Reencode("unicode", 1)
+
+#http://fontforge.github.io/fontinfo.html
+SetFontHasVerticalMetrics(1)
+
+#copy glyphs in control character slots to the custom slots
+# from (0x0-0x1F) to (0xe000-0xe001F)
+n = 32
+i = 0
+while(i < n)
+	Select(i)
+    Cut()
+    Select(i + 57344)
+    Paste()
+    i++
+endloop
+
+Generate($2)
+Quit(0)

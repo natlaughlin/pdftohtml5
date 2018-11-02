@@ -1,0 +1,19 @@
+-I /usr/include/sys
+-I /usr/local/include/fontforge
+-I /opt/X11/include
+-I /opt/X11/include/freetype2
+
+-library fontforge
+
+-mode Directory
+-runtime BridJ
+-reification
+-scanSymbols
+-preferJavac
+-structsInLibrary
+-v
+-f
+
+-o jnaerator
+
+/usr/local/include/fontforge/*.h

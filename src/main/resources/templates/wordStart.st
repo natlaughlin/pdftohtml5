@@ -1,0 +1,19 @@
+<span class="w" 
+style="
+$if(top)$
+top:$top$px;
+$endif$
+$if(left)$
+left:$left$px;
+$endif$
+$if(font)$
+font-family:'$font$'; 
+$endif$
+$if(fontSize)$
+font-size:$fontSize$px;
+$endif$
+$if(r)$
+color:rgb($r$,$g$,$b$);
+$endif$
+"
+>
