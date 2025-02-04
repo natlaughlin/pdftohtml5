@@ -12,6 +12,16 @@ Examples
 - [p01sep02.pdf](https://natlaughlin.github.io/pdftohtml5/src/test/resources/p01sep02.pdf) ‣ [p01sep02.html](https://natlaughlin.github.io/pdftohtml5/src/test/resources/p01sep02.html)
 - [fw4.pdf](https://natlaughlin.github.io/pdftohtml5/src/test/resources/fw4.pdf) ‣ [fw4.html](https://natlaughlin.github.io/pdftohtml5/src/test/resources/fw4.html)
 
+Requirements
+
+- Java 1.8
+- Maven 3.6
+
+Instructions
+
+- `mvn clean package`
+- `java -cp target/pdftohtml5-0.0.1-SNAPSHOT.jar com.natlaughlin.pdftohtml5.PdfToHtml5 <OPTIONS> <PDF file>`
+
 TODO
 
 - Some special font types are not currently supported.

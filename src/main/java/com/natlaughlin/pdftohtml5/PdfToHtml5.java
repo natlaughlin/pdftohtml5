@@ -72,7 +72,7 @@ public class PdfToHtml5
     private static void usage()
     {
         System.err.println(
-                        "Usage: java -jar pdftohtml5.jar [OPTIONS] <PDF file>\n" +
+                        "Usage: java -cp pdftohtml5.jar com.natlaughlin.pdftohtml5.PdfToHtml5 [OPTIONS] <PDF file>\n" +
                         "  -output <dir>	The output directory, defaults to 'out' \n" +
                         "  <PDF file>       The PDF document to use\n"
             );
