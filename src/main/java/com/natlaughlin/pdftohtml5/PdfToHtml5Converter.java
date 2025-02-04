@@ -891,7 +891,7 @@ public class PdfToHtml5Converter extends PDFTextStripper
 		}
 		else
 		{
-			fontforge = "/usr/local/bin/fontforge";
+			fontforge = "/opt/homebrew/bin/fontforge";
 		}
 		
 		File convertfile = new File(tempDir, "encode.pe");

@@ -19,7 +19,7 @@ public class TestConvertPDF
 		catch(IOException e){
 
 		}
-		converter.setInputPdfFileName("src/test/resources/p01apr97.pdf");
+		converter.setInputPdfFileName("src/test/resources/p01sep02.pdf");
 		converter.setInputPdfPassword("");
 		converter.setForceParsing(true);
 		converter.setOutputBaseDir("out");
