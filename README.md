@@ -16,6 +16,7 @@ Requirements
 
 - Java 1.8
 - Maven 3.6
+- FontForge
 
 Instructions
 
