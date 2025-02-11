@@ -18,8 +18,8 @@ public class PdfToHtml5
      */
     public static void main( String[] args ) throws Exception
     {
-    	PdfToHtml5 o = new PdfToHtml5();
-    	o.run(args);
+        PdfToHtml5 o = new PdfToHtml5();
+        o.run(args);
     }
 
     public void run( String[] args ) throws Exception
@@ -32,14 +32,14 @@ public class PdfToHtml5
         for( int i=0; i<args.length; i++ )
         {
            if( args[i].equals( OUTPUT ) )
-    		{
-            	i++;
+            {
+                i++;
                 if( i >= args.length )
                 {
                     usage();
                 }
-            	outputPath = args[i];
-    		}
+                outputPath = args[i];
+            }
             else
             {
                 if( pdfFile == null )
@@ -73,7 +73,7 @@ public class PdfToHtml5
     {
         System.err.println(
                         "Usage: java -cp pdftohtml5.jar com.natlaughlin.pdftohtml5.PdfToHtml5 [OPTIONS] <PDF file>\n" +
-                        "  -output <dir>	The output directory, defaults to 'out' \n" +
+                        "  -output <dir>    The output directory, defaults to 'out' \n" +
                         "  <PDF file>       The PDF document to use\n"
             );
         System.exit( 1 );

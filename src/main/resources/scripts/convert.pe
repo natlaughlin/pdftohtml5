@@ -11,58 +11,58 @@ em_size = $ascent + $descent
 Print(em_size)
 
 if($iscid == 0)
-	# font is 8 bit
-	Print("Non-CID")
-	n = 256
-	maxcode = 0xff
-	#order = 2(Truetype), 3(Postscript)
-	if($order == 2)
-		Print("Truetype")
-		i = 0
-		code2gid = Array(n)
-		while(i < n)
-			Select(i)
-			code2gid[i] = Array(4)
-			code2gid[i][0] = i
-			code2gid[i][1] = GlyphInfo("Name")
-			code2gid[i][2] = GlyphInfo("Unicode")
-			code2gid[i][3] = GlyphInfo("Encoding")
-			++i
-		endloop
-		Print(code2gid)
-	else
-		Print("Postscript")
-		# move the slot such that it's consistent with the encoding seen in PDF
-		i = 0
-		code2gid = Array(n)
-		while(i < n)
-			Select(i)
-			name = GlyphInfo("Name")
-			unicode = GlyphInfo("Unicode")
-			encoding = GlyphInfo("Encoding")
-			newunicode = UnicodeFromName(name)
-			code2gid[i] = Array(5)
-			code2gid[i][0] = i
-			code2gid[i][1] = name
-			code2gid[i][2] = unicode
-			code2gid[i][3] = encoding
-			code2gid[i][4] = newunicode
-			++i
-		endloop
-		Print(code2gid)
-	endif
+    # font is 8 bit
+    Print("Non-CID")
+    n = 256
+    maxcode = 0xff
+    #order = 2(Truetype), 3(Postscript)
+    if($order == 2)
+        Print("Truetype")
+        i = 0
+        code2gid = Array(n)
+        while(i < n)
+            Select(i)
+            code2gid[i] = Array(4)
+            code2gid[i][0] = i
+            code2gid[i][1] = GlyphInfo("Name")
+            code2gid[i][2] = GlyphInfo("Unicode")
+            code2gid[i][3] = GlyphInfo("Encoding")
+            ++i
+        endloop
+        Print(code2gid)
+    else
+        Print("Postscript")
+        # move the slot such that it's consistent with the encoding seen in PDF
+        i = 0
+        code2gid = Array(n)
+        while(i < n)
+            Select(i)
+            name = GlyphInfo("Name")
+            unicode = GlyphInfo("Unicode")
+            encoding = GlyphInfo("Encoding")
+            newunicode = UnicodeFromName(name)
+            code2gid[i] = Array(5)
+            code2gid[i][0] = i
+            code2gid[i][1] = name
+            code2gid[i][2] = unicode
+            code2gid[i][3] = encoding
+            code2gid[i][4] = newunicode
+            ++i
+        endloop
+        Print(code2gid)
+    endif
 else
-	Print("CID")
-	maxcode = 0xffff
-	Print($cidfontname)
-	if($order == 2)
-		Print("Truetype")
-		Reencode("unicode")
-	else
-		Print("Postscript")
-		CIDFlatten()	
-	endif
-	
+    Print("CID")
+    maxcode = 0xffff
+    Print($cidfontname)
+    if($order == 2)
+        Print("Truetype")
+        Reencode("unicode")
+    else
+        Print("Postscript")
+        CIDFlatten()
+    endif
+
 endif
 
 
