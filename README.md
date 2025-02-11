@@ -21,7 +21,7 @@ Requirements
 Instructions
 
 - `mvn clean package`
-- `java -cp target/pdftohtml5-0.0.1-SNAPSHOT.jar com.natlaughlin.pdftohtml5.PdfToHtml5 <OPTIONS> <PDF file>`
+- `java -cp ./target/pdftohtml5-0.0.1-SNAPSHOT.jar com.natlaughlin.pdftohtml5.PdfToHtml5 <OPTIONS> <PDF file>`
 
 TODO
 
